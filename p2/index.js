@@ -89,6 +89,38 @@ function pow_recursion(num, pow) {
   }
 }
 
-console.log(pow_recursion(10, 5));
-console.log(pow_recursion(3, 4));
-console.log(pow_recursion(5, 0));
+// console.log(pow_recursion(10, 5));
+// console.log(pow_recursion(3, 4));
+// console.log(pow_recursion(5, 0));
+
+function intervals() {
+  myNum = 1;
+  function printNumbers() {
+    console.log(myNum);
+    myNum++;
+  }
+  const intervalId = setInterval(printNumbers, 500);
+  function stopInterval() {
+    clearInterval(intervalId);
+  }
+  setTimeout(stopInterval, 2000);
+}
+
+// intervals();
+
+function task12() {
+  myList = [0, 400, 50, 13, 6, 15, 24, 5, 2, 3];
+  console.log(myList);
+  for (let j = myList.length - 1; j > 0; j--) {
+    for (let i = 0; i < j; i++) {
+      if (myList[i] > myList[i + 1]) {
+        [myList[i], myList[i + 1]] = [myList[i + 1], myList[i]];
+      }
+    }
+    console.log(myList);
+  }
+
+  console.log(myList);
+}
+
+// task12();
